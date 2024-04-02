@@ -3,7 +3,6 @@ import { db } from "../../services/firebaseConnection";
 import { useEffect, useState } from "react";
 import Card from "../../components/card/card";
 import "./style.css";
-import { Star } from "@phosphor-icons/react";
 
 interface ProductBookmarksProps{
     idBank: string,
