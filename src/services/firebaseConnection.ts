@@ -7,12 +7,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBmWM8fh1v_aeBTQfx72UThOvR4N8WNuS0",
-  authDomain: "react-routes-ad010.firebaseapp.com",
-  projectId: "react-routes-ad010",
-  storageBucket: "react-routes-ad010.appspot.com",
-  messagingSenderId: "769255142816",
-  appId: "1:769255142816:web:2ad22840cf31786137a0c5"
+  apiKey: "AIzaSyBVvS8h7kps7M5_4p6pB9WRP9IsEh9oPLY",
+  authDomain: "contextapi-a4757.firebaseapp.com",
+  projectId: "contextapi-a4757",
+  storageBucket: "contextapi-a4757.appspot.com",
+  messagingSenderId: "554098605258",
+  appId: "1:554098605258:web:86c280cf704cda0ada0833"
 };
 
 // Initialize Firebase

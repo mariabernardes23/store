@@ -1,15 +1,17 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, useContext, useState } from "react";
 import { Input } from "../../components/input";
 import { auth } from "../../services/firebaseConnection";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { UserCircle } from "@phosphor-icons/react";
 import "../login/style.css";
+import { UserContext } from "../../context/UserContex";
 
 export function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigate = useNavigate()
+    const { addUser } = useContext(UserContext)
 
     function handleSubmit(e: FormEvent) {
         e.preventDefault()
@@ -20,7 +22,9 @@ export function Login() {
         }
 
         signInWithEmailAndPassword(auth, email, password)
-        .then(() => {
+        .then((userCredential) => {
+            const user = userCredential.user            
+            addUser(user.uid, user.email, user.email)
             console.log('Login realizado com sucesso');
             navigate('/', { replace: true})
         })

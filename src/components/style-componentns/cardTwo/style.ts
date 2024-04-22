@@ -106,6 +106,7 @@ const CardButtonGet = styled.button`
 
     @media screen (max-width: 600px) {
         margin: 0;
+        font-size: 0.8rem;
     }
 `
 

@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Card from "../../components/card/card";
+import { UserContext } from "../../context/UserContex";
 import './style.css';
+import { Name } from "../../components/Name";
 
 export interface ProductProps {
     id: number,
@@ -27,12 +29,13 @@ export function Home() {
         }
         getProducts()
     }, [])
-    
+
     return(
         <>
-            <h1 className="welcome">Bem-vindos ao nosso site! Explore nossa seleção de produtos cuidadosamente escolhidos 
+            <Name />
+            <h1 className="welcome">Seja bem-vindo a nosso site! Explore nossa seleção de produtos cuidadosamente escolhidos 
                 para atender às suas necessidades.</h1>
-                
+             
             <div className='card-list'>
                 {
                     products.map((item, index) => (
