@@ -1,0 +1,105 @@
+.profile {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #203936;
+    margin-bottom: 1.5rem;
+}
+
+.div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-edit {
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    border: 0.5rem solid #203936;
+    border-radius: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.icon-pencil {
+    cursor: pointer;
+}
+
+.icon-pencil :hover {
+    background-color: #D15521;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out; 
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    border: 0.5rem solid #203936;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    display: block;
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    border: 0.2rem solid #848780;
+    border-radius: 0.5rem;
+}
+
+.button {
+    cursor: pointer;
+    padding: 0.5rem;
+    width: 50%;
+    background-color: #C52F0C;
+    border: 0;
+    border-radius: 2rem;
+    color: #F6ECE2;
+    font-weight: bold;
+    margin: 0;
+}
+
+.button:hover {
+    background-color: #D15521;
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out; 
+}
+
+@media screen and (max-width: 900px) {
+    .form {
+        width: 80%;
+    }
+}
+    
+@media screen and (max-width: 600px) {
+    .container-edit {
+        padding: 0.5rem;
+    }
+
+    .icon-pencil {
+        font-size: 15px;
+    }
+
+   .form {
+        width: 90%;
+    }
+    
+    .button {
+        width: 70%;
+    }
+}

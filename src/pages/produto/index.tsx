@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { ProductProps } from "../home"
 import CardTwo from "../../components/cardTwo.tsx/cardTwo"
 import "./style.css"
+import { Name } from "../../components/Name"
 
 export function Produto() {
     const { id } = useParams()
@@ -15,7 +16,6 @@ export function Produto() {
             .then(response => response.json())
             .then((data) => {
                 setProduct(data)
-                console.log(data);
             })
             .catch((error) => {
                 console.log(error);
@@ -25,15 +25,18 @@ export function Produto() {
     }, [])
 
     return(
-        <div className="center">
-            <CardTwo 
-                id={product?.id} 
-                title={product?.title} 
-                price={product?.price} 
-                description={product?.description} 
-                category={product?.category} 
-                image={product?.image}
-            />
-        </div>
+        <>
+            <Name />
+            <div className="center">
+                <CardTwo 
+                    id={product?.id} 
+                    title={product?.title} 
+                    price={product?.price} 
+                    description={product?.description} 
+                    category={product?.category} 
+                    image={product?.image}
+                />
+            </div>
+        </>
     )
 }

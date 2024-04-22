@@ -1,0 +1,19 @@
+.button-update {
+    background-color: #C52F0C;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #F6ECE2;
+    margin: 0.5rem;
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.button-save{
+    display: block;
+    margin: auto;
+    background-color: #C52F0C;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #F6ECE2;
+    cursor: pointer;
+}

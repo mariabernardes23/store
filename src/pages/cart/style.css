@@ -1,0 +1,24 @@
+.my-cart {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #203936;
+    margin-bottom: 1.5rem;
+}
+
+.info-cart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button-clear {
+    cursor: pointer;
+    background-color: #C52F0C;
+    border: 0;
+    border-radius: 0.5rem;
+    color: #F6ECE2;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 2rem;
+}

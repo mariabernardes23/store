@@ -1,10 +1,12 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import './style.css'
 import { Link } from 'react-router-dom';
 import { Storefront, List } from "@phosphor-icons/react";
+import { CartContext } from '../../context/CartContext';
 
 export function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { totalProduct } = useContext(CartContext)
 
   return (
     <nav className='navbar'>
@@ -21,6 +23,12 @@ export function Navbar() {
         </li>
         <li>
           <Link to={'/favoritos'} className='link'>Favoritos</Link>
+        </li>
+        <li>
+          <Link to={'/cart'} className='link'>Carrinho {totalProduct}</Link>
+        </li>
+        <li>
+          <Link to={'/profile'} className='link'>Perfil</Link>
         </li>
         <li>
           <Link to={'/login'} className='link'>Login</Link>

@@ -3,6 +3,7 @@ import { db } from "../../services/firebaseConnection";
 import { useEffect, useState } from "react";
 import Card from "../../components/card/card";
 import "./style.css";
+import { Name } from "../../components/Name";
 
 interface ProductBookmarksProps{
     idBank: string,
@@ -45,6 +46,7 @@ export function Favoritos() {
 
     return(
         <>
+            <Name />
             <h1 className="text-bookmark">Esta é a sua página de produtos favoritados! Aqui estão os itens que 
                 você selecionou como seus favoritos.</h1>
         
